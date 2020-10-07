@@ -1,0 +1,18 @@
+### new record display
+
+GET https://micro.loc/rest/new HTTP/1.1
+
+### new record save - POST
+
+POST https://micro.loc/rest/create HTTP/1.1
+Content-Type: multipart/form-data; boundary=----RESTVSCODE
+
+------RESTVSCODE
+Content-Disposition: form-data; name="text"
+
+title
+------RESTVSCODE
+Content-Disposition: form-data; name="age"
+
+23
+------RESTVSCODE--

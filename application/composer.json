@@ -1,0 +1,19 @@
+{
+	"name": "application/main",
+	"authors": [{
+		"name": "Don Myers",
+		"email": "donmyers@me.com",
+		"homepage": "http://www.example.com",
+		"role": "Everything"
+	}],
+	"description": "Main Application",
+	"require": {
+		"projectorangebox/dispatcher": "dev-master"
+	},
+	"autoload": {
+		"files": ["helpers/common.php"],
+		"psr-4": {
+			"application\\": ""
+		}
+	}
+}

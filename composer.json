@@ -1,0 +1,127 @@
+{
+  "name": "application/example",
+  "description": "Example Application",
+  "minimum-stability": "dev",
+  "require": {
+    "application/main": "dev-master",
+    "projectorangebox/fs": "dev-master",
+    "projectorangebox/app": "dev-master",
+    "projectorangebox/cache": "dev-master",
+    "projectorangebox/config": "dev-master",
+    "projectorangebox/container": "dev-master",
+    "projectorangebox/log": "dev-master",
+    "projectorangebox/request": "dev-master",
+    "projectorangebox/response": "dev-master",
+    "projectorangebox/router": "dev-master",
+    "projectorangebox/dispatcher": "dev-master",
+    "projectorangebox/middleware": "dev-master",
+    "projectorangebox/views": "dev-master",
+    "projectorangebox/events": "dev-master",
+    "projectorangebox/pear": "dev-master",
+    "projectorangebox/box": "dev-master",
+    "projectorangebox/validate": "dev-master",
+    "projectorangebox/collection": "dev-master",
+    "projectorangebox/handlebars": "dev-master",
+    "projectorangebox/session": "dev-master",
+    "projectorangebox/assets": "dev-master",
+    "projectorangebox/encryption": "dev-master",
+    "projectorangebox/viewparser": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.3"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "application"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/handlebars"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/assets"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/session"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/collection"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/views"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/pear"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/validate"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/fs"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/app"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/cache"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/config"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/container"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/events"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/log"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/request"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/response"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/router"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/dispatcher"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/middleware"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/viewparser"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/encryption"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/box"
+    }
+  ]
+}

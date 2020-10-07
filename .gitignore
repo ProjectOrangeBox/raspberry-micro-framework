@@ -1,0 +1,7 @@
+/vendor
+/var
+/.env
+/composer.lock
+/packages/projectorangebox
+/packages/simple-q
+/support/keys

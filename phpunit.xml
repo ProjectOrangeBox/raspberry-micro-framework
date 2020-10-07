@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  phpunit tests/* 
+  phpunit tests/ConfigTest.php
+-->
+<phpunit bootstrap="vendor/autoload.php" colors="true" verbose="true" stopOnFailure="false">
+  <php>
+    <env name="TEMP_FOLDER" value="/var/tmp"/>
+    <env name="PHPUNIT" value="1"/>
+  </php>
+</phpunit>

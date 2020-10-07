@@ -1,0 +1,88 @@
+{
+  "about": {
+    "fname": "Don",
+    "lname": "Myers",
+    "title": "Systems Integrator",
+    "description": "A Systems What?<br>
+    Working behind the scenes at many company's both large and small, I've done everything from setting up VMs and configuring the operating system. To developing complex systems to transfer data between them. I've also developed multiple browser-based applications that allowed users inside and outside the company to access information from multiple sources in a secure way.<br>
+    <br>
+    Still confused?<br>
+    Perhaps this wiki description will describe it better?<br>
+    A systems integrator (or system integrator) is a person or company that specializes in bringing together component subsystems into a whole and ensuring that those subsystems function together, a practice known as system integration. They also solve problems of automation. Systems integrators may work in many fields but the term is generally used in the information technology (IT) field such as computer networking, the defense industry, the mass media, enterprise application integration, business process management or manual computer programming. Data quality issues are an important part of the work of systems integrators. [<a href=\"https://en.wikipedia.org/wiki/Systems_integrator#:~:text=A%20systems%20integrator%20(or%20system,also%20solve%20problems%20of%20automation.\">link</a>]"
+  },
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Quadratec, Inc.",
+      "description": "Responsible for operating system setup, configuration & upgrades, data analyst, database management, project conception, coding, support and documentation.",
+      "examples": "Integration of ERP transactional emails with ",
+      "years": 5,
+      "milestones": [
+        "Integration of ERP email system with external marketing transaction system",
+        "Account system to manage drop ships with internal web interface",
+        "Custom web interface to manage Drop Ship Confirmations",
+        "Custom web interface to manage all back orders",
+        "Integration of eCommerce Front End orders with ERP backend",
+        "Integration of ERP stock and warehouse levels pushed to eCommerce Front End",
+        "Integration of FedEx Tracking with Marketing Email on delivery",
+        "Integration of ERP/Account Gift Certificates with eCommerce Front End",
+        "Custom Email scheduling micro service REST end point to manage all transactional email",
+        "Custom web interface to manage vendor codes and shipping levels"
+      ]
+    },
+    {
+      "title": "Adjunct Faculty",
+      "company": "University of Valley Forge",
+      "description": "Teaching basic skills to create a web presents as well as touching on dynamic page generation.",
+      "years": 7.5,
+      "milestones": [
+        "Many years of excellient reviews",
+        "Continuous updates with changing technology",
+        "Creating of custom potal for students"
+      ]
+    },
+    {
+      "title": "Principal Consultant",
+      "company": "roundCorner",
+      "description": "Salesforce Consultant providing general support for administration and data set construction. Also worked with clients to providing data integration between the clients systems and Salesforce using the Salesforce APIs.",
+      "years": 1,
+      "milestones": [
+        "Creating of a custom data importer",
+        "Integration of customer data with SalesForce using API",
+        "Creating of a custom testing suite",
+        "Integration of custom javascript to import form data directly into SalesForce"
+      ]
+    },
+    {
+      "title": "Senior Developer",
+      "company": "Splashlight",
+      "description": "Conception and programming of a project management and client portal for one of the largest photo studio in New York city.",
+      "years": 1,
+      "milestones": [
+        "Creating of a custom data importer",
+        "Integration of customer data with SalesForce using API",
+        "Creating of a custom testing suite",
+        "Integration of custom javascript to import form data directly into SalesForce"
+      ]
+    },
+    {
+      "title": "Sr. Web Developer",
+      "company": "eBay Enterprise",
+      "description": "Construction and management of the view layer for company's big and small.",
+      "years": 2.5,
+      "milestones": [
+        "Creating of a custom data importer",
+        "Integration of customer data with SalesForce using API",
+        "Creating of a custom testing suite",
+        "Integration of custom javascript to import form data directly into SalesForce"
+      ]
+    }
+  ],
+  "skils": [
+    "PHP","HTML/CSS","Javascript","Linux/Unix","Agile","SQL","GIT","PHPUNIT","Apache","Bash","jQuery",
+    "WebPack","IMAP","POP","SMTP","SalesForce CRM","authorize.net","AWS","REST","JSON","GULP","Node.js",
+    "Project Management","Supervisory Experience","Data Modeling/Transformation/Migration","Source Code Management","Unit Testing",
+    "Network Design","Systems Administration","Hardware & Software Configuration","Security Audit"
+
+  ]
+}

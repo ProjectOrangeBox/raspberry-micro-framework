@@ -1,0 +1,7 @@
+### get all
+
+GET https://micro.loc/rest/index HTTP/1.1
+
+### get 1
+
+GET https://micro.loc/rest/show/3 HTTP/1.1

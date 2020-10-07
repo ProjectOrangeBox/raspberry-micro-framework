@@ -1,0 +1,7 @@
+### delete record display
+
+GET https://micro.loc/rest/remove/23 HTTP/1.1
+
+### delete record
+
+GET https://micro.loc/rest/delete/23 HTTP/1.1
