@@ -345,13 +345,14 @@ function debugShelly() {
 # setup the variables
 
 # where are we?
-SCRIPTFILE=$(readlink -f $0)
-SCRIPTDIRECTORY=`dirname $SCRIPTFILE`
+SCRIPTDIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # Applications root path
 ROOT="`dirname $SCRIPTDIRECTORY`"
 
 println "Application Directory $ROOT"
+
+cd "$ROOT";
 
 # Read / Writeable's Directory
 VARDIRECTORY="$ROOT/var"

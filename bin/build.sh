@@ -5,16 +5,6 @@ source "$(cd `dirname $0` && pwd)/shelly.sh"
 # load config file
 source $CONFIGFILE
 
-runAsRoot
-
-# check if owner is valid user
-ownerExists $OWNER
-println "Owner $OWNER"
-
-# check if group is valid group
-groupExists $GROUP
-println "Group $GROUP"
-
 println "Building Folder Structure."
 for dir in "${REQUIREDDIRECTORIES[@]}"
 do
@@ -28,7 +18,6 @@ else
   println "\033[0;31mProjectOrangeBox raspberry-package already checked out.\033[0m"
 fi;
 
-fix
 
 if [ $(which composer) ]; then
   println "Running Composer Update."

@@ -15,3 +15,17 @@ For example:
 5. Can I make a universal record level access code?
 6. How far can I take Dependency Injection?
 7. Can we decouple...
+
+## To Install
+
+First install php composer You can learn how to do that here https://getcomposer.org/
+
+Followed by Downloading the Repositories, building the folders structure and updating your packages.
+
+```
+git clone https://github.com/ProjectOrangeBox/raspberry-micro-framework.git
+
+cd raspberry-micro-framework
+
+./bin/build.sh
+```
