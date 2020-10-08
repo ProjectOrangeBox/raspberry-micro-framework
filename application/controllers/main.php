@@ -3,14 +3,12 @@
 namespace application\controllers;
 
 use FS;
-use Exception;
 use projectorangebox\assets\Assets;
 use projectorangebox\events\Events;
 use projectorangebox\log\LoggerTrait;
 use projectorangebox\events\EventsTrait;
 use projectorangebox\collection\Collection;
 use projectorangebox\dispatcher\Controller;
-use projectorangebox\dispatcher\DispatcherException;
 
 class main extends Controller
 {
@@ -146,14 +144,15 @@ class main extends Controller
 	{
 		echo 'start<pre>';
 
-		$this->collection->addLogin('Wrong Password default.');
+		$c = new \projectorangebox\collection\Collection();
 
-		$this->collection->addLogin(['Right Password 3 lowest', 'Right Password 3 lowest #2'], Collection::PRIORITY_LOWEST);
+		$c->addLogin('Wrong Password default.');
 
-		$this->collection->addLogin('Right Password 1 default');
+		$c->addLogin(['Right Password 3 lowest', 'Right Password 3 lowest #2'], Collection::PRIORITY_LOWEST);
 
-		$this->collection->addLogin('A Password 2 highest', Collection::PRIORITY_HIGHEST);
+		$c->addLogin('Right Password 1 default');
 
+		$c->addLogin('A Password 2 highest', Collection::PRIORITY_HIGHEST);
 
 		$rules = [
 			'id'   => ['field' => 'id', 'label' => 'Id', 'rules' => 'required|integer|max_length[10]|less_than[4294967295]'],
@@ -173,17 +172,13 @@ class main extends Controller
 
 		$v->isValid($data, $rules);
 
-		$err = $v->errors(true);
+		$c->addModel($v->errors(true));
 
-		$this->collection->addModel($err)->get();
-
-		$vars = $this->collection->groups();
+		$vars = $c->keys();
 
 		foreach ($vars as $var) {
-			var_dump('VAR IS: ' . $var, json_encode($this->collection->get($var)));
+			var_dump('VAR IS: ' . $var, json_encode($c->get($var)));
 		}
-
-		//var_dump($this->collection->get('Login,Model'));
 
 		return 'end';
 	}
