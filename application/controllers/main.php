@@ -20,11 +20,7 @@ class main extends Controller
 
 	public function index(): string
 	{
-		$json = FS::file_get_contents('/support/data/data.json');
-		$json = str_replace(chr(10), '', $json);
-		$data = json_decode($json, JSON_OBJECT_AS_ARRAY);
-
-		return $this->view->data($data)->render('default');
+		return $this->view->render('default');
 	}
 
 	public function fourohfour(): string
@@ -192,29 +188,19 @@ class main extends Controller
 
 	public function test5(): string
 	{
-		echo '<pre>';
-
-		echo 'time ' . time() . PHP_EOL;
-
 		$this->session->flashData->set('name1', 'Johnny Appleseed', 60);
 		$this->session->flashData->set('name2', 'Johnny Appleseed', 75);
 		$this->session->flashData->set('name3', 'Johnny Appleseed');
 
-		var_dump($this->session->all());
-
-		return 'end';
+		return '<p>time ' . time() . '</p><p><a href="https://micro.loc/test6">/test6</a></p>';
 	}
 
 	public function test6(): string
 	{
-		echo '<pre>';
+		$a = json_encode($this->session->all(), JSON_PRETTY_PRINT);
+		$b = json_encode($this->session->flashData->all(), JSON_PRETTY_PRINT);
 
-		echo 'time ' . time() . PHP_EOL;
-
-		var_dump($this->session->all());
-		var_dump($this->session->flashData->all());
-
-		return 'end';
+		return '<p>time ' . time() . '</p><pre>' . $a . $b . '</pre><p><a href="https://micro.loc/test5">/test5</a></p>';
 	}
 
 	public function test7(): void

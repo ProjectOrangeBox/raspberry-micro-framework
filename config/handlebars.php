@@ -7,7 +7,7 @@ return [
 	'view extension' => '.hbs',
 	'cache folder' => '/var/views',
 	'cache prefix' => 'hbs.',
-	'force compile' => false,
+	'force compile' => true,
 	'data' => [
 		'name' => 'Don Meyers',
 		'address' => '12 South Main Street<br>Phoenixville, Pa 19460',

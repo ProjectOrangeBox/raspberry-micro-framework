@@ -32,8 +32,7 @@ return [
 		'set' => '/packages/projectorangebox/handlebars/src/hb-plugins/set.hbs.php',
 		'is_even' => '/packages/projectorangebox/handlebars/src/hb-plugins/is_even.hbs.php',
 	],
-	'views' =>
-	[
+	'views' => [
 		'handlebars/header' => '/views/handlebars/header.hbs',
 		'handlebars/template2' => '/views/handlebars/template2.hbs',
 		'handlebars/template' => '/views/handlebars/template.hbs',

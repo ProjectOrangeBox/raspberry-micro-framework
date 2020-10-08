@@ -105,7 +105,7 @@ return [
 		if (!isset($config['plugins'])) {
 			$config['plugins'] = \projectorangebox\pear\Collector::collect($config);
 
-			\FS::var_export_file('/var/tmp/pear.php', $config, 0666);
+			\FS::file_put_contents('/var/tmp/pears.php', str_replace('\\\\', '\\', preg_replace('%(.+)\'(?<name>[a-zA-Z0-9_]+)\' => \'\\\\(?<value>.+)\',%i', '\'$2\' => \\\\$3::class,', FS::var_export_php($config))), 0666);
 		}
 
 		return new \projectorangebox\pear\PearSkin($config + ['viewService' => $container->view]);
@@ -114,16 +114,10 @@ return [
 	'validate' => [function ($container) {
 		$config = $container->config->get('validate', []);
 
-		if (!isset($config['rules'])) {
+		if (!isset($config['rules'], $config['filters'])) {
 			$config = \projectorangebox\validate\Collector::collect($config);
 
-			\FS::var_export_file('/var/tmp/rules.php', $config['rules'], 0666);
-		}
-
-		if (!isset($config['filters'])) {
-			$config = \projectorangebox\validate\Collector::collect($config);
-
-			\FS::var_export_file('/var/tmp/filters.php', $config['filters'], 0666);
+			\FS::file_put_contents('/var/tmp/rules_filters.php', str_replace('\\\\', '\\', preg_replace('%(.+)\'(?<name>[a-zA-Z0-9_]+)\' => \'\\\\(?<value>.+)\',%i', '\'$2\' => \\\\$3::class,', FS::var_export_php($config))), 0666);
 		}
 
 		return new \projectorangebox\validate\Validate($config);
