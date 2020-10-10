@@ -25,7 +25,10 @@
     "projectorangebox/session": "dev-master",
     "projectorangebox/assets": "dev-master",
     "projectorangebox/encryption": "dev-master",
-    "projectorangebox/viewparser": "dev-master"
+    "projectorangebox/viewparser": "dev-master",
+    "projectorangebox/model": "dev-master",
+    "projectorangebox/auth": "dev-master",
+    "projectorangebox/acl": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.3"
@@ -122,6 +125,18 @@
     {
       "type": "path",
       "url": "packages/projectorangebox/box"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/model"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/auth"
+    },
+    {
+      "type": "path",
+      "url": "packages/projectorangebox/acl"
     }
   ]
 }

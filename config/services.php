@@ -123,15 +123,9 @@ return [
 		return new \projectorangebox\validate\Validate($config);
 	}, false],
 	'database' => [function ($container) {
-		$medoo = $container->config->get('database');
+		$connections = $container->config->get('connections', []);
 
-		return new \Medoo\Medoo([
-			'database_type' => $medoo['type'],
-			'database_name' => $medoo['name'],
-			'server' => $medoo['server'],
-			'username' => $medoo['username'],
-			'password' => $medoo['password'],
-		]);
+		return new \Medoo\Medoo($connections['db']['default']);
 	}],
 	'viewparser' => [function ($container) {
 		$config = $container->config->get('viewparser', []);
@@ -150,4 +144,45 @@ return [
 
 		return new \projectorangebox\handlebars\Handlebars($config);
 	}],
+	'model->Auth' => [function ($container) {
+		$connections = $container->config->get('connections', []);
+
+		$config['db'] = new \Medoo\Medoo($connections['db']['default']);
+		$config['validationService'] = $container->validate;
+
+		return new \projectorangebox\auth\AuthModel($config);
+	}],
+	'model->Users' => [function ($container) {
+		$connections = $container->config->get('connections', []);
+
+		$config['db'] = new \Medoo\Medoo($connections['db']['default']);
+		$config['validationService'] = $container->validate;
+
+		return new \projectorangebox\auth\AuthModel($config);
+	}],
+	'model->Usersmeta' => [function ($container) {
+		$connections = $container->config->get('connections', []);
+
+		$config['db'] = new \Medoo\Medoo($connections['db']['default']);
+		$config['validationService'] = $container->validate;
+
+		return new \projectorangebox\auth\AuthModel($config);
+	}],
+	'model->Roles' => [function ($container) {
+		$connections = $container->config->get('connections', []);
+
+		$config['db'] = new \Medoo\Medoo($connections['db']['default']);
+		$config['validationService'] = $container->validate;
+
+		return new \projectorangebox\auth\AuthModel($config);
+	}],
+	'model->Access' => [function ($container) {
+		$connections = $container->config->get('connections', []);
+
+		$config['db'] = new \Medoo\Medoo($connections['db']['default']);
+		$config['validationService'] = $container->validate;
+
+		return new \projectorangebox\auth\AuthModel($config);
+	}],
+
 ];
