@@ -2,7 +2,7 @@
 
 return [
 	'config' => [function ($container) {
-		return new \projectorangebox\config\ConfigFile(require __ROOT__ . '/config/config.php');
+		return new \projectorangebox\config\Config(require __ROOT__ . '/config/config.php');
 	}],
 	'dispatcher' => [function ($container) {
 		return new \projectorangebox\dispatcher\Dispatcher(['containerService' => $container]);
@@ -17,7 +17,7 @@ return [
 		return new \projectorangebox\events\Events($container->config->get('event', []));
 	}],
 	'log' => [function ($container) {
-		return new \projectorangebox\log\handlers\File($container->config->get('log', []));
+		return new \projectorangebox\log\Logger($container->config->get('log', []));
 	}],
 	'collection' => [function ($container) {
 		return new \projectorangebox\collection\Collection($container->config->get('collection', []));
