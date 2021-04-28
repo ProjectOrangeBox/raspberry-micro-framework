@@ -2,6 +2,7 @@
 
 return [
 	'folder' => '/config',
+	'handler' => 'File',
 
 	// optional pdo database configuration connection - see class for table syntax
 	/*
